@@ -17,9 +17,9 @@ log_button.click()
 try :
     print("inputing username and password...") 
     user_id = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.NAME, "user_id")))
-    user_id.send_keys("E94081107") #personal_ID : fill in yourself!!!!!!!!!!!!!
+    user_id.send_keys("") #personal_ID : fill in yourself!!!!!!!!!!!!!
     password_input = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.NAME, "passwd")))
-    password_input.send_keys("jefferSon1225") #personal_password : fill in yourself!!!!!!!!!!!!!!!!
+    password_input.send_keys("") #personal_password : fill in yourself!!!!!!!!!!!!!!!!
 
     #verification code  (若CNN judge 失敗 要跑loop)
     browser.save_screenshot("image.png")
