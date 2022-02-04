@@ -1,5 +1,5 @@
 # ncku course bot
-+ **!!!!Highly recommend not to use for your course registration, in case your ip be banned !!!!. Simply do this for fun**
++ **!!!!Highly recommend not to use this for your course registration, in case your ip be banned !!!!. Simply do this for fun**
 1. crawler package install first
 ```
 $ pip3 install selenium 
