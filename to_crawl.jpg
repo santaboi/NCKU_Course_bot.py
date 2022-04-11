@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<meta charset=utf-8>
+		<meta http-equiv=X-UA-Compatible content="IE=edge">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name=description content="">
+		<meta name=author content="">
+				<meta name="robots" content="index,nofollow" />
+							<title>國立成功大學課程資訊及選課系統</title>
+		<link rel="icon" type="image/x-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/favicon16.ico?v2" sizes="16x16" />
+		<link rel="icon" type="image/x-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/favicon32.ico?v2" sizes="32x32" />
+		<link rel="icon" type="image/x-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/favicon64.ico?v2" sizes="64x64" />
+		<link rel="icon" type="image/x-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/favicon256.ico?v2" sizes="256x256" />
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon.png">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-57x57.png" sizes="57x57">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-60x60.png" sizes="60x60">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-72x72.png" sizes="72x72">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-76x76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-114x114.png" sizes="114x114">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-120x120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-144x144.png" sizes="144x144">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-152x152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-180x180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="https://course.ncku.edu.tw/acadcdn/favicon/apple-touch-icon-precomposed.png">
+		<script src="https://course.ncku.edu.tw/acadcdn/js/modernizr-custom.js?20220221"></script>
+		<script>
+			var query = Modernizr.mq('only all');
+			if( !query ){
+				window.location = "./manual/browser.php";
+			}
+		</script>
+		<!--[if lt IE 11]>
+			<script src="https://course.ncku.edu.tw/acadcdn/js/html5shiv.min.js?20220221"></script>
+			<script src="https://course.ncku.edu.tw/acadcdn/js/respond.min.js?20220221"></script>
+		<![endif]-->
+		<!--[if lt IE 10]>
+			<script src="https://course.ncku.edu.tw/acadcdn/js/manual.js?20220221"></script>
+		<![endif]-->
+		<link href="https://course.ncku.edu.tw/acadcdn/css/mis_grid.css?20220221" rel="stylesheet" type="text/css">		
+		<script src="https://course.ncku.edu.tw/acadcdn/bootstrap/js/jquery_1.11.1.min.js?20220221"></script>		
+				<link href="https://course.ncku.edu.tw/acadcdn/bootstrap/css/bootstrap_ncku.css?20220221" rel=stylesheet>
+		<link href="https://course.ncku.edu.tw/acadcdn/bootstrap/css/bootstrap_ncku_1.css?20220221" rel=stylesheet>
+		<link href="https://course.ncku.edu.tw/acadcdn/bootstrap/css/responsive.css?20220221" rel=stylesheet>
+		<link href="https://course.ncku.edu.tw/acadcdn/bootstrap/css/bootstrap-theme_ncku.css?20220221" rel=stylesheet>
+					<script src="https://course.ncku.edu.tw/acadcdn/bootstrap/js/bootstrap.js?20220221"></script>		
+        <script type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/bootstrap/js/main.js?20220221"></script>   
+		<script type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/bootstrap/js/wow.min.js?20220221"></script>   
+		<script type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/bootstrap/js/multimodal.min.js?20220221"></script>   
+		
+		<link href="https://course.ncku.edu.tw/acadcdn/js/bootstrap-select/css/bootstrap-select.min.css?20220221" rel="stylesheet" type="text/css">		
+		<script type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/js/bootstrap-select/js/bootstrap-select.min.js?20220221"></script>   
+		<script type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/js/jquery.cookie.js?20220221"></script>
+
+		<script src="https://course.ncku.edu.tw/acadcdn/js/common.js?20220221" type="text/javascript"></script>
+		<script src="https://course.ncku.edu.tw/acadcdn/js/mis_grid.js?20220221" type="text/javascript"></script>
+		<script src="https://course.ncku.edu.tw/acadcdn//nf/commons/v2.1.1/js/jquery.blockUI.js?20220221" type="text/javascript"></script>
+		<link href="https://course.ncku.edu.tw/acadcdn/js/jquery-ui-1.11.4.custom/jquery-ui.min.css?20220221" rel="stylesheet" type="text/css" /> 
+		<script src="https://course.ncku.edu.tw/acadcdn/js/jquery-ui-1.11.4.custom/jquery-ui.min.js?20220221" type="text/javascript"></script>			
+		<link href="https://course.ncku.edu.tw/acadcdn//nf/commons/v2.1.1/css/jquery_validate/validate.css?20220221" rel="stylesheet" type="text/css" />	
+		<!--Fontawesome 5 Free-->
+		<link rel='stylesheet' href='https://course.ncku.edu.tw/acadcdn/js/fontawesome/css/solid.min.css?20220221'>
+		<link rel='stylesheet' href='https://course.ncku.edu.tw/acadcdn/js/fontawesome/css/regular.min.css?20220221'>
+		<link rel='stylesheet' href='https://course.ncku.edu.tw/acadcdn/js/fontawesome/css/fontawesome.min.css?20220221'>
+		<!--Fontawesome 4 Free-->
+		<link rel='stylesheet' href='https://course.ncku.edu.tw/acadcdn/js/epack/css/font-awesome.min.css?20220221'>	
+		<link rel='stylesheet' href='https://course.ncku.edu.tw/acadcdn/js/epack/css/elements/list.css?20220221'>
+		<link rel="stylesheet" href="https://course.ncku.edu.tw/acadcdn/js/epack/css/elements/note.css?20220221">
+		<script src="https://course.ncku.edu.tw/acadcdn/js/performance.now-polyfill.js?20220221"></script>
+		<script  type="text/javascript" src="https://course.ncku.edu.tw/acadcdn/js/mdb-sortable/js/addons/jquery-ui-touch-punch.min.js?20220221"></script>
+		<script src="https://course.ncku.edu.tw/acadcdn/js/jquery.taphold.js?20220221"></script>
+		<style type='text/css'>
+		.modal-backdrop {display: none;	}
+		.modal {background: rgba(0, 0, 0, 0.5);	}
+		#header .navbar-nav.navbar-right >li a {color: #535353;}
+		#gotop {
+		    display: none;
+		    position: fixed;
+		    right: 40px;
+		    bottom: 40px;    
+		    padding: 10px 15px;    
+		    font-size: 20px;
+		    background: #991f23;
+		    color: white;
+		    cursor: pointer;
+		    border-radius: 50px;
+		}
+		.rwd_th {
+		    background: #efefef none repeat scroll 0 0;
+		    font-size:16px;
+		    vertical-align: center;
+		    font-weight:bold;
+		}
+		.rwd_td, .rwd_th {
+		    border: 1px solid #dcdcdc;
+		    min-height:50px;
+		    padding: 5px;
+		}
+		.rwd_td{
+			background: white;
+		}	
+		.ui-widget {
+			    font-family: 微軟正黑體,"Lato",sans-serif !important;
+		}	
+
+		#login_user {
+		    background: #991f23 none repeat scroll 0 0;
+		    border-radius: 15px 0 0 15px;
+		    color: white;
+		    display: inline-block;
+		    font-size: 15px;
+		    margin: 10px 0px 10px 0;
+		    text-align: center;
+		    max-width: 80px;
+		    min-width: 60px;
+		    white-space: nowrap;
+		    padding: 6px;
+		}
+		#login_logout {
+		    background: #991f23 none repeat scroll 0 0;
+		    border-radius: 0 15px 15px 0;
+		    color: white;
+		    cursor: pointer;
+		    display: inline-block;
+		    font-size: 15px;
+		    margin: 10px 5px 10px 3px !important;
+		    text-align: center;
+		    width: 60px;
+		    padding: 6px;
+		}
+		.choose {
+		    background: #991f23 none repeat scroll 0 0;
+		    border: medium none;
+		    color: white;
+		    margin: 10px 0 10px 3px;
+		    padding: 2px;
+		    width: 200px;
+		    padding: 7px;
+		}			
+		
+		.apName_h {
+				display:block;
+				background: #7d171b none no-repeat scroll center top;
+				color: #f1efe4;
+				font: 30px 微軟正黑體;
+				text-align: center;
+				vertical-align:middle;
+		}
+
+		.apName_h2 {
+				display:block;
+				background: #7d171b none no-repeat scroll center top;
+				color: #f1efe4;
+				text-align: center;
+				vertical-align:middle;
+		}
+
+		.navbar-center {
+			display: inline-block;
+			float: none;
+			vertical-align: top;
+		}
+		.navbar-collapse-center {
+			text-align: center;
+		}
+
+		.navbar-inverse .navbar-nav > .open > a,
+		.navbar-inverse .navbar-nav > .open > a:hover,
+		.navbar-inverse .navbar-nav > .open > a:focus {
+		color: #535353;
+		background-color: #eee;;
+		}
+
+		.dsp {
+			background-color: #E7E4D0;
+		}
+		.dsp_link {
+			padding-left: 1em;
+		}
+		.dsp_top {
+				font-size: 16px;
+		}
+		@media screen and (max-width: 767px) {
+			.dsp {
+				background-color: #E7E4D0;
+			}
+			.dsp_link {
+				padding-left: 1em;
+			}
+			.dsp_top {
+				font-size: 18px;
+			}
+		}
+		@media (min-width: 768px) and (max-width: 991px) {
+			.dsp {
+				font-size: 16px;
+				margin: 0px 1px;
+			}
+			.dsp_link {
+				padding-left: 0em;
+			}
+			.dsp_top {
+				font-size: 18px;
+			}
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.dsp {
+				background-color: #e7e4d0;
+				font-size: 16px;
+				margin: 0px 1px;
+			}
+			.dsp_link {
+				padding-left: 0em;
+			}
+			.dsp_top {
+				font-size: 18px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.dsp {
+				font-size: 16px;
+				margin: 0px 1px;
+			}
+			.dsp_link {
+				padding-left: 0em;
+			}
+			.dsp_top {
+				font-size: 18px;
+			}
+		}
+		.dropdown .divider {
+			height: 0.08em;
+			margin: 5px 0;
+			overflow: hidden;
+			background-color: #982124;
+		}
+		.ncku_logo {
+			padding-top:2px;
+			max-width:300px;
+		} 
+		@media (max-width: 768px) {
+			.ncku_logo {
+				padding-top:12px;
+				max-width:240px;
+			} 
+		}
+		.note_font_md {
+			font-size:medium;
+		}
+		@media (max-width: 767px) {
+			.note_font_md {
+				font-size:smaller;
+			}
+		}
+		.note_font_lg {
+			font-size:large;
+		}
+		@media (max-width: 767px) {
+			.note_font_lg {
+				font-size:medium;
+			}
+		}
+		.note_font_x-lg {
+			line-height: 26px;
+			font-size:x-large;
+		}
+		@media (max-width: 767px) {
+			.note_font_x-lg {
+				font-size:large;
+			}
+		}
+		.reveal-modal {
+			position: relative;
+			margin: 0 auto;
+			top: 25%;
+		}
+		.reveal-modal2 {
+			position: relative;
+			margin: 0 auto;
+			top: 25%;
+		}
+		@media (max-width: 991px) {
+			.reveal-modal2 {
+				position: relative;
+				margin: 0 auto;
+				top: 20%;
+			}
+		}
+		@media (max-width: 767px) {
+			.reveal-modal2 {
+				position: relative;
+				margin: 0 auto;
+				top: 15%;
+			}
+		}
+		.breadcrumb{
+			font-weight: bold;
+		}
+		@media (min-width: 400px) {
+			#show_sp_msg_text .row {
+				display: flex;
+			}
+		}
+		</style>
+		<script>
+		$(document).ready(function(){
+			$("#login_logout").click(function(){
+				location.href='index.php?c=auth&m=logout';
+			});
+			$(function(){
+			    $("#gotop").click(function(){
+			        jQuery("html,body").animate({
+			            scrollTop:0
+			        },500);
+			    });
+			    $(window).scroll(function() {
+			    	
+			        if ( $(this).scrollTop() > 100){
+			            $('#gotop').fadeIn("fast");
+			        } else {
+			            $('#gotop').stop().fadeOut("fast");
+			        }
+			    });
+			});
+					
+		});
+		storageSupported = typeof localStorage !== 'undefined' || typeof sessionStorage !== 'undefined';
+		storageEngine = window.localStorage || window.sessionStorage;
+		if (storageSupported) {
+			try {
+				storageEngine.setItem('storage-testing', 1);
+			} catch(e) {
+				storageSupported = false;
+			} finally {
+				storageEngine.removeItem('storage-testing');
+			}
+        }
+		</script>	
+	</head>
+	<body>	
+		<span style="display:none;" id="portal_is_login"></span>
+		<header id="header"> 
+			  <div class="navbar navbar-inverse " role=navigation>
+				<div class=container style="padding-left: 0px; padding-right: 0px;">						
+
+					<div style='background:#f1efe4; '>
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand visible-lg visible-md visible-sm" href="index.php">
+							<img src="https://course.ncku.edu.tw/acadcdn/images/Logo_course.png?20220221" alt="logo" class="ncku_logo">
+							</a>
+							<span class="navbar-brand visible-xs">
+							<img src="https://course.ncku.edu.tw/acadcdn/images/Logo_course.png?20220221" alt="logo" class="ncku_logo">
+							</span>
+						</div>	
+
+						<div class="collapse navbar-collapse navbar-collapse-center visible-lg visible-md visible-sm">   
+						<!--大視窗選單開始-->  
+						<ul class="nav navbar-nav navbar-right visible-lg visible-md visible-sm">
+							<li class=start>
+								<a onclick="javascript:setLang('eng');return false;" href=""><span class="dsp_top">ENGLISH</span></a>
+							</li>
+							<li class="dropdown dropdown_1" >				
+								<a onclick="javascript:setLang('cht');return false;" href=""><span class="dsp_top">中文</span></a>
+							</li>
+														<li class=end>
+								<a href="./index.php?c=portal"><span class="dsp_top">HOME</span></a>																															
+							</li>
+						</ul>
+						<!--大視窗選單結束-->  
+					   </div>
+					</div>
+					<!--小視窗程式名稱開始-->  
+					<div class="apName visible-lg visible-md visible-sm">
+							<span>
+							110學年度第2學期&nbsp;<i class="fas fa-home" style="cursor: pointer;" title="回首頁" onclick="javascript:location.href='./index.php?c=portal'">&nbsp;</i><i class="fas fa-sign-in-alt" style="cursor: pointer;" title="登入" onclick="javascript:location.href='./index.php?c=auth'">&nbsp;</i>							</span>
+					</div>
+					<div class="apName visible-xs">
+							<span style="font-size:medium;">
+								110學年度第2學期&nbsp;<i class="fas fa-home" style="cursor: pointer;" title="回首頁" onclick="javascript:location.href='./index.php?c=portal'">&nbsp;</i><i class="fas fa-sign-in-alt" style="cursor: pointer;" title="登入" onclick="javascript:location.href='./index.php?c=auth'">&nbsp;</i>							</span>
+					</div>
+					<!--小視窗程式名稱結束-->  
+					
+					<!--選單開始-->  
+					<style>
+						@media (max-width: 767px) {
+							.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse { margin-right: -0px;margin-left: -0px;}
+						}
+						.navbar-ncku {
+							margin-top: 0px;margin-left:0px;margin-right:0px;
+						}
+						@media (max-width: 767px) {
+							.navbar-ncku {
+								margin-top: 0px;margin-left:-15px;margin-right:-15px;
+							}
+						}
+						.fa_icon { margin-left : -18px;text-indent : 4px;}
+						</style><div class="collapse navbar-collapse navbar-collapse-center narbar-menu" style="background: #ffffff none no-repeat scroll center top;"><!--第一層  原背景#bd3135--><ul class="nav navbar-nav navbar-left navbar-ncku"><li class="dropdown visible-xs">
+						<a class="dsp" href="./index.php?c=auth"><i class="fas fa-sign-in-alt">&nbsp;</i><b>登入</b></a><!--小視窗選單開始-->  
+						<li class="dropdown visible-xs">
+							<a onclick="javascript:setLang('eng');return false;" class="dsp" href="">ENGLISH</a>
+						<li class="dropdown visible-xs" >				
+							<a onclick="javascript:setLang('cht');return false;" class="dsp" href="">中文</a>
+						<li class="dropdown visible-xs">
+							<a class="dsp" href="./index.php?c=portal">HOME</a>	<!--小視窗選單結束--><li class="dropdown ">
+							<a class="dsp" href=# class="dropdown-toggle eng_span" data-toggle=dropdown role=button aria-expanded=true onclick='$(this).find(".caret").trigger("click");'>
+								課程資訊 
+								<span class=caret></span>
+							</a>
+							<ul class="sub-menu" role=menu>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry11215"><span class="dsp_link fa_icon"><i class="fa fa-search" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>課程查詢</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry11215&m=en_query"><span class="dsp_link fa_icon"><i class="fa fa-search" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>進階課程查詢</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry12322"><span class="dsp_link fa_icon"><i class="fa fa-file-text" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>學分承認徵詢表</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry13225"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>A9通識登記人數</span></a></li>
+								<li style="text-align:left;display:none;" class="eng_span"><a href="./index.php?c=qry13215"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>課程停開公告</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry13235"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>超修公告</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=qry13245"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>補課資料查詢</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="./index.php?c=related_link"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>相關連結</span></a></li>
+								<li style="text-align:left;" class="eng_span"><a href="https://course-query.acad.ncku.edu.tw/index.php?c=qry11215&lang=cht" target="_blank"><span class="dsp_link fa_icon"><i class="fa fa-info-circle" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>歷年課程查詢</span></a></li>
+							</ul><li class="dropdown eng_span">
+						<a class="dsp" href="./index.php?c=qry11215">課程查詢</a><li class="dropdown eng_span">
+						<a class="dsp" href="./index.php?c=cos31315">我的預排科目清單</a><li class="dropdown">
+							<a class="dsp" href=# class="dropdown-toggle eng_span" data-toggle=dropdown role=button aria-expanded=true onclick='$(this).find(".caret").trigger("click");'>
+								已選課程 
+								<span class=caret></span>
+							</a><ul class="sub-menu" role=menu>
+							<li style="text-align:left;" class="eng_span"><a href="./index.php?c=cos32315"><span class="dsp_link fa_icon"><i class="fa fa-calendar" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>我的課表</span></a></li>
+							<li style="text-align:left;" class="eng_span"><a href="./index.php?c=cos21215"><span class="dsp_link fa_icon"><i class="fa fa-list" aria-hidden="true" style="padding-left:2px;">&nbsp;</i>已選課程清單</span></a></li>
+						</ul><li class="dropdown eng_span">
+							<a class="dsp" href="./index.php?c=auth">選課</a></ul><!--大視窗選單開始--><ul class="nav navbar-nav navbar-right visible-lg visible-md visible-sm" style="margin-top: 0px;margin-right:10px;"><li class="dropdown" style="background-color:#f8eaea;" title="登入">
+								<a class="dsp" href="./index.php?c=auth" style="background-color:#e7e4d0;"><i class="fas fa-sign-in-alt">&nbsp;</i>登入</a></ul><!--大視窗選單結束-->  </div>					<!--選單結束-->  
+											<div class="breadcrumb col-md-12 apName_1 " style="background: #ffffff;padding-bottom: 0em;!important;margin-bottom:0.5em;">
+												
+						<span>
+							<a href="index.php?c=portal">首頁</a>
+							&nbsp;&gt;&nbsp;功能總覽						</span>
+					</div>
+					
+				</div>
+			</div>	
+	   </header>
+	   <div class="form modal fade " id="show_note_msg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md reveal-modal">
+			<div class="modal-content tc-note-style4 tc-note-warning">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"></h4>
+					<div class="note-icon">
+							<i class="fa fa-info-circle"></i>
+						</div>
+				</div>
+				<div class="modal-body">
+						<div class="note-desc" style="text-align:left;">
+							<div>
+								<ul class="tc-list tc-list-border">
+									<li>
+										<h4><span id="show_note_msg_text"></span></h4>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+				<div class="modal-footer" style="z-index:9999;position: relative;">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="form modal fade " id="show_sp_msg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md reveal-modal" style="top: 5%!important;">
+			<div class="modal-content tc-note-style4 tc-note-warning">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"></h4>
+					<div class="note-icon">
+							<i class="fa fa-info-circle"></i>
+						</div>
+				</div>
+				<div class="modal-body">
+						<div class="note-desc" style="text-align:left;">
+							<div>
+								<ul class="tc-list tc-list-border">
+									<li>
+										<h4><span id="show_sp_msg_text"></span></h4>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+				<div class="modal-footer" style="z-index:9999;position: relative;">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="form modal fade " id="login_timeout_msg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md reveal-modal">
+			<div class="modal-content tc-note-style4 tc-note-danger">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"></h4>
+					<div class="note-icon">
+							<i class="fa fa-exclamation-circle"></i>
+						</div>
+				</div>
+				<div class="modal-body">
+						<div class="note-desc" style="text-align:left;">
+							<div>
+								<ul class="tc-list tc-list-border">
+									<li>
+										<h4><span id="login_timeout_text" style="color:red;"></span></h4>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+				<div class="modal-footer" style="z-index:9999;position: relative;">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+				</div>
+			</div>
+			</div>
+		</div>
+				<script>
+			function show_note_msg(nowmsg, type , show_title){	
+				nowmsg_show=nowmsg.replace(/\n/g,'<br>');
+				if(show_title==undefined){
+					show_title='訊息通知';
+				}
+				var show_note_style1="tc-note-danger tc-note-success tc-note-warning";
+				var show_note_style2="fa-exclamation-circle fa-check-circle fa-info-circle";
+				nowmsg_type = (type!=undefined&&(type==0||type==1||type=='0'||type=='1'))?((parseInt(type)==1)?'1':'0'):'2';
+				if(nowmsg_type=='0'){
+					$("#show_note_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-danger");
+					$("#show_note_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-exclamation-circle");
+				}else if(nowmsg_type=='1'){
+					$("#show_note_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-success");
+					$("#show_note_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-check-circle");
+				}else{
+					$("#show_note_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-warning");
+					$("#show_note_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-info-circle");
+				}
+				if(nowmsg.indexOf("<br><br>") >= 0 ){
+					$("#show_note_msg").find(".modal-dialog").removeClass("reveal-modal").addClass("reveal-modal2");
+				}else{
+					$("#show_note_msg").find(".modal-dialog").removeClass("reveal-modal2").addClass("reveal-modal");
+				}
+				if(nowmsg.indexOf("<!---TOP--->") >= 0 ){
+					$("#show_note_msg").find(".modal-dialog").removeClass("reveal-modal").removeClass("reveal-modal2");
+				}
+				$('#show_note_msg').find('.modal-title').html(show_title);
+				$('#show_note_msg').find('#show_note_msg_text').html(nowmsg_show);
+				$('#show_note_msg').modal();
+			}
+			function show_sp_msg(nowmsg, type , show_title){	
+				nowmsg_show=nowmsg.replace(/\n/g,'<br>');
+				if(show_title==undefined){
+					show_title='訊息通知';
+				}
+				var show_note_style1="tc-note-danger tc-note-success tc-note-warning";
+				var show_note_style2="fa-exclamation-circle fa-check-circle fa-info-circle";
+				nowmsg_type = (type!=undefined&&(type==0||type==1||type=='0'||type=='1'))?((parseInt(type)==1)?'1':'0'):'2';
+				if(nowmsg_type=='0'){
+					$("#show_sp_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-danger");
+					$("#show_sp_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-exclamation-circle");
+				}else if(nowmsg_type=='1'){
+					$("#show_sp_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-success");
+					$("#show_sp_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-check-circle");
+				}else{
+					$("#show_sp_msg").find(".modal-content").removeClass(show_note_style1).addClass("tc-note-warning");
+					$("#show_sp_msg").find(".note-icon").find(".fa").removeClass(show_note_style2).addClass("fa-info-circle");
+				}
+				if(nowmsg.indexOf("<br><br>") >= 0 ){
+					$("#show_sp_msg").find(".modal-dialog").removeClass("reveal-modal").addClass("reveal-modal2");
+				}else{
+					$("#show_sp_msg").find(".modal-dialog").removeClass("reveal-modal2").addClass("reveal-modal");
+				}
+				$('#show_sp_msg').find('.modal-title').html(show_title);
+				$('#show_sp_msg').find('#show_sp_msg_text').html(nowmsg_show);
+				$('#show_sp_msg').modal();
+			}
+			function show_login_timeout(nowmsg){	
+				if(nowmsg==undefined){
+					nowmsg='操作已逾時，請重新登入！';
+				}
+				$('#login_timeout_msg').find('.modal-title').html('訊息通知');
+				$('#login_timeout_msg').find('#login_timeout_text').html(nowmsg);
+				$('#login_timeout_msg').modal();
+				throw new Error(nowmsg);
+			}
+			function show_logout(){	
+				$('#login_timeout_msg').find('.modal-title').html('訊息通知');
+				$('#login_timeout_msg').find('#login_timeout_text').html('您已於其他分頁或視窗登出系統！');
+				$('#login_timeout_msg').modal();
+			}
+			$("#login_timeout_msg").on('hidden.bs.modal', function () {
+				window.location.replace('./index.php?c=portal');
+			});
+			
+			$("#show_sp_msg").on('hidden.bs.modal', function () {
+				storageEngine.setItem('show_sp_msg_20220221_cht', 1);
+			});
+
+			$(document).keyup(function(e) {
+				if(e.keyCode==13){
+					if(($("#run_logout_confirm_msg").data('bs.modal') || {isShown: false}).isShown){
+						$(".run_logout_confirm_save_button").trigger("click");
+					}
+					if(($("#login_timeout_msg").data('bs.modal') || {isShown: false}).isShown){
+						$('#login_timeout_msg').modal('hide');
+					}
+					if(($("#show_note_msg").data('bs.modal') || {isShown: false}).isShown){
+						$('#show_note_msg').modal('hide');
+					}
+					if(($("#show_sp_msg").data('bs.modal') || {isShown: false}).isShown){
+						$('#show_sp_msg').modal('hide');
+					}
+				}
+			});
+		</script>
+<!--Content-->			
+			<div class="container theme-showcase" role="main">
+				<div id='main_content' style="padding-top:2px;">					
+	                <script src="https://course.ncku.edu.tw/acadcdn/js/jquery.numericonly.js"></script>
+<script src="https://course.ncku.edu.tw/acadcdn/js/jquery.clock.js"></script>
+<style>
+.block_title {
+    color: #26425e;
+    display: block;
+    font: 25px "微軟正黑體",arial,verdana,tahoma;
+    padding-left: 10px;
+    text-align: center;
+    font-weight:bolder;
+    
+}
+.copyright-text{
+    margin-top: 10px;
+}
+hr.style { 
+  border: 0; 
+  height: 1px; 
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+.breadcrumb{
+	display: none;
+}
+::-webkit-input-placeholder {text-transform: none;}
+:-moz-placeholder {text-transform: none;}
+::-moz-placeholder {text-transform: none;}
+:-ms-input-placeholder {text-transform: none;}
+::placeholder {text-transform: none;}
+input::placeholder{text-transform: none;}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.rwd_hint {
+	font-size: large;;
+}
+.rwd_input1_6 {
+	display:none;
+}
+@media (max-width: 767px) {
+	.rwd_input1_1 {
+		display: block;
+	}
+	.rwd_input1_2 {
+		border-radius: 4px 4px 0px 0px;font-size:large;border: 1px solid #ccc;
+	}
+	.input-group-addon:first-child {
+		border-radius: 4px 4px 0px 0px;border: 1px solid #ccc;
+	}
+
+	.input-group .form-control:last-child:not(.rwd_input1_2), .input-group-addon:last-child:not(.rwd_input1_2) {
+		border-radius: 0px 0px 4px 4px;
+	}
+	.input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) {
+		border-radius: 0px 0px 0px 4px;
+	}
+	.input-group-addon:last-child:not(.rwd_input1_2) {
+		border-radius: 0px 0px 4px 0px;
+		}
+	.rwd_input1_3 {
+		border-radius: 0px 0px 4px 4px;
+	}
+	.rwd_input1_5 {
+		display:none;
+	}
+	.rwd_input1_6 {
+		display:block;
+	}
+	.rwd_input1_7 {
+		padding-top:1.7em;
+		padding-bottom:1.7em;
+	}
+	.rwd_input1_8 {
+		padding:0;
+	}
+	.rwd_hint {
+		font-size: medium;;
+	}
+}
+</style>
+ <br/>
+ <form id="LoginForm" name="LoginForm" action='./index.php?c=auth&m=login' method='post'>
+		<div class="row">
+		 	<div class="col-md-2"></div>
+	     	<div id="loginbg" class='col-md-8' >        
+				<div >
+					    <div class="panel panel-danger">
+						  <div class="panel-danger">
+					      	<div align="center" class="panel-heading">
+								<h4 class="panel-title">
+									使用成功入口登入 								</h4>
+						  	</div>
+						  </div>
+						  
+					      <div align="center" class="panel-body">
+					      	<a class="btn btn-default" href="#" onclick="javascript:location.href='index.php?c=auth&m=oauth&time='+Math.round(+new Date()/1000);return false;">
+							  使用<img src='https://course.ncku.edu.tw/acadcdn/images/logo_portal.png' width='163' alt='「國立成功大學成功入口」' style='display:inline;-webkit-filter:contrast(1.4);filter:contrast(1.4);'>登入					      	</a>
+					      </div>
+					    	
+					      <div class="panel-warning">
+					      	<div align="center" class="panel-heading">
+								<h4 class="panel-title">
+									使用帳號密碼登入								</h4>
+						  	</div>
+						  </div>
+					      <div class="panel-body">
+					      	
+					      	<div class="input-group rwd_input1_1">
+							  <span class="rwd_input1_2 input-group-addon">帳　　號</span></span>
+							  <input maxlength="9" autocomplete="off" type="text" class="form-control acpwd_input rwd_input1_3" placeholder="學號／識別證號" name="user_id" id="user_id" style="text-transform:uppercase;ime-mode:disabled;">
+							</div>
+							<span class="rwd_input1_5"><br></span>
+							<span class="rwd_input1_6 rwd_input1_7"></span>
+		                	<div class="input-group rwd_input1_1">
+							  <span class="input-group-addon rwd_input1_2">密　　碼</span>
+							  <input autocomplete="off" type="password" class="form-control acpwd_input rwd_input1_3" placeholder="同成功入口" name="passwd" id="passwd" style="ime-mode:disabled;">
+							</div>	        
+							<span class="rwd_input1_5"><br></span>
+							<span class="rwd_input1_6 rwd_input1_7"></span>
+							<div class="input-group rwd_input1_1 rwd_input1_6">
+							  <span class="input-group-addon rwd_input1_2">驗<span style='letter-spacing:1px;'> 證 </span>碼</span>
+							</div>	                    
+		                	<div class="input-group">
+							  <span class="input-group-addon rwd_input1_5" style="width:10px">驗<span style='letter-spacing:1px;'> 證 </span>碼<span style="font-weight: 10">&nbsp;</span></span>
+							  <input autocomplete="off" type="text" class="form-control acpwd_input" placeholder="" name="code" id="code" style="ime-mode:disabled;">
+							  <span class="input-group-addon rwd_input1_8">
+							  	<img src="./index.php?c=verifycode" style='' hspace="3" align="absmiddle" class="click" onclick="this.src='./index.php?c=verifycode&'+Math.random();"/>
+							  </span>
+							</div>
+							<div style="padding-top:6px;padding-bottom:6px;text-align:center;" class="noselect"><span id="current_time" class="rwd_hint"><span id="clock"></span></span></div>
+				            <div align="center">			 
+				                <button type='submit' class='btn btn-default' id='submit_by_acpw'>
+									<span><i class="fas fa-sign-in-alt">&nbsp;</i>登入</span>
+								</button>
+							</div>
+							<br>
+				            <div align="center">	
+						 		<span class="rwd_hint">
+									密碼與<a href='http://i.ncku.edu.tw/zh-hant/user/login' target='_blank'>成功入口</a>相同(密碼錯誤，請洽成功入口，服務電話:61010,61045)			              		</span>
+	              	  		</div>
+					      </div>
+					    </div>
+	           </div>
+	        </div>
+		  <div class="col-md-2"></div>
+		</div>
+</form>
+<script>
+	$("body").on("submit", "form", function() {
+		$(this).submit(function() {
+			return false;
+		});
+		return true;
+	});
+	if (!window.console){ console = {log: function() {}} };
+	$(document).keypress(function(e) {
+		if((e.keyCode ? e.keyCode : e.which) == 13) $("#LoginForm").submit();
+	});
+	$("#passwd").keyup(function(e){
+		if((e.keyCode ? e.keyCode : e.which) == 13) $("#LoginForm").submit();
+	});
+
+	$('#LoginForm').submit(function () {
+		var user_id = $.trim($('#user_id').val());
+		var passwd = $('#passwd').val();
+		var code = $.trim($('#code').val());
+		if (user_id  === '' || passwd  === '' ) {
+			$("#submit_by_acpw_msg").show();
+			show_note_msg("<span style='color:red;'>請輸入帳號與密碼！</span>","0");
+			return false;
+		}else if (code  === ''||!$.isNumeric(code)) {
+				$("#submit_by_acpw_msg").show();
+			show_note_msg("<span style='color:red;'>驗證碼不正確！</span>","0");
+			return false;
+			
+		}		
+	});
+ 	$("#user_id").filter_input({regex:'[A-Za-z0-9]'});
+	$("#user_id").keyup(function(e){
+		var str=$(this).val();
+		str=str.replace(/([Ａ-Ｚａ-ｚ０-９＿．，＠－＋＊～：；（）　])/g,
+			function ($0) {
+			  	return $0.charCodeAt(0)!='12288'?String.fromCharCode($0.charCodeAt(0) - 65248):String.fromCharCode(32);
+			}
+		);
+		str=str.toUpperCase();
+		$(this).val(str);
+		if((e.keyCode ? e.keyCode : e.which) == 13) $("#LoginForm").submit();
+	});
+	$("#code").filter_input({regex:'[A-Za-z0-9]'});
+	$("#code").keyup(function(e){
+		var str=$(this).val();
+		str=str.replace(/([Ａ-Ｚａ-ｚ０-９＿．，＠－＋＊～：；（）　])/g,
+			function ($0) {
+			  	return $0.charCodeAt(0)!='12288'?String.fromCharCode($0.charCodeAt(0) - 65248):String.fromCharCode(32);
+			}
+		);
+		$(this).val(str);
+		if((e.keyCode ? e.keyCode : e.which) == 13) $("#LoginForm").submit();
+	});
+	$.removeCookie("SSO");
+	$("#clock").clock({
+		"timestamp":1645462119,
+		"langSet":"zh-tw",
+		"dateFormat":"Y-m-d ",
+		"timeFormat":"H:i:s",
+		"rate":50
+	});
+
+</script>               </div>
+			</div>
+			
+<!--footer-->				
+			<footer id="footer">
+ 
+        <div class="container">
+            <div class="copyright-text text-center">
+			    如有任何問題，請連絡<a href="https://reg-acad.ncku.edu.tw/var/file/41/1041/img/2680/choose_cont.htm" target="_blank">相關諮詢人員</a><br>版權所有 <i class="fa fa-copyright"></i> 2022 國立成功大學 計算機與網路中心            </div>
+        </div>
+        
+		<div id='gotop' ><center>^</center></div> 
+		<script>
+			function storageChange (event) {
+				if(storageSupported){
+					if(event.key === 'cos_logged_in') {
+						if(event.newValue=='false'){
+							if($("#portal_is_login").text()!=""){
+								show_logout();
+							}
+						}
+					}
+				}
+			}
+			if(storageSupported){
+				window.addEventListener('storage', storageChange, false);
+			}
+								if(storageSupported){
+						storageEngine.setItem('cos_logged_in', 'false');
+					}
+							</script>
+
+		    </footer>
+	<!--/#footer-->
+		   </body>
+	   
